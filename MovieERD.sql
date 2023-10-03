@@ -1,3 +1,7 @@
+DROP SCHEMA IF EXISTS ‘movie_database’;
+CREATE SCHEMA IF NOT EXISTS ‘movie_database’ DEFAULT CHARACTER SET utf8;
+USE ‘movie_database’;
+
 CREATE TABLE `genres`  (
   `genre_id` int NOT NULL,
   `genre_name` varchar(255) NULL,
