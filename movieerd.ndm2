@@ -547,7 +547,7 @@
                 "isBinary": false,
                 "charset": "",
                 "collation": "",
-                "isNullable": false,
+                "isNullable": true,
                 "defaultType": "Others",
                 "defaultValue": "",
                 "isOnUpdateCurrentTimestamp": false,
@@ -592,15 +592,7 @@
             "primaryKey": {
               "objectType": "PrimaryKey_MYSQL",
               "name": "",
-              "fields": [
-                {
-                  "objectType": "IndexField_MYSQL",
-                  "name": "genre_id",
-                  "keyLength": 0,
-                  "order": "",
-                  "oldName": ""
-                }
-              ],
+              "fields": [],
               "oldName": "",
               "indexMethod": "",
               "comment": ""
