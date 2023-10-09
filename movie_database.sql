@@ -1,11 +1,6 @@
-DROP SCHEMA IF EXISTS movie_database;
-CREATE SCHEMA IF NOT EXISTS movie_database DEFAULT CHARACTER SET utf8;
-USE movie_database;
-
 CREATE TABLE `genres`  (
-  `genre_id` int NOT NULL,
-  `genre_name` varchar(255) NULL,
-  PRIMARY KEY (`genre_id`)
+  `genre_id` int NULL,
+  `genre_name` varchar(255) NULL
 ) ENGINE = InnoDB;
 
 CREATE TABLE `ratings`  (
@@ -27,4 +22,11 @@ CREATE TABLE `title_genres`  (
   `tconst` varchar(255) NULL,
   `genre_id` int NOT NULL
 ) ENGINE = InnoDB;
+
+CREATE TABLE `tmdb_data`  (
+  `imdb_id` int NULL,
+  `revenue` int NULL,
+  `budget` int NULL,
+  `certification` varchar(255) NULL
+);
 
