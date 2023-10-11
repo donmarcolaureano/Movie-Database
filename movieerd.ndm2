@@ -285,7 +285,25 @@
               "indexMethod": "",
               "comment": ""
             },
-            "foreignKeys": [],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_MYSQL",
+                "name": "fk_title_genres_title_basics_1",
+                "fields": [
+                  "tconst"
+                ],
+                "referenceSchema": "default",
+                "referenceTable": "title_basics",
+                "referenceFields": [
+                  "tconst"
+                ],
+                "onDelete": "",
+                "onUpdate": "",
+                "sourceCardinality": "OneOrManyRelationship",
+                "targetCardinality": "OneAndOnlyOneRelationship",
+                "oldName": ""
+              }
+            ],
             "checks": [],
             "triggers": [],
             "tablePartitions": []
@@ -476,8 +494,8 @@
                 ],
                 "onDelete": "",
                 "onUpdate": "",
-                "sourceCardinality": "ManyRelationship",
-                "targetCardinality": "ManyRelationship",
+                "sourceCardinality": "ZeroOrOneRelationship",
+                "targetCardinality": "OneOrManyRelationship",
                 "oldName": ""
               }
             ],
@@ -547,7 +565,7 @@
                 "isBinary": false,
                 "charset": "",
                 "collation": "",
-                "isNullable": true,
+                "isNullable": false,
                 "defaultType": "Others",
                 "defaultValue": "",
                 "isOnUpdateCurrentTimestamp": false,
@@ -592,7 +610,15 @@
             "primaryKey": {
               "objectType": "PrimaryKey_MYSQL",
               "name": "",
-              "fields": [],
+              "fields": [
+                {
+                  "objectType": "IndexField_MYSQL",
+                  "name": "genre_id",
+                  "keyLength": 0,
+                  "order": "",
+                  "oldName": ""
+                }
+              ],
               "oldName": "",
               "indexMethod": "",
               "comment": ""
@@ -612,7 +638,7 @@
                 "onDelete": "",
                 "onUpdate": "",
                 "sourceCardinality": "OneAndOnlyOneRelationship",
-                "targetCardinality": "OneAndOnlyOneRelationship",
+                "targetCardinality": "OneOrManyRelationship",
                 "oldName": ""
               }
             ],
@@ -698,32 +724,6 @@
               },
               {
                 "objectType": "TableField_MYSQL",
-                "name": "revenue",
-                "type": "int",
-                "length": -2147483648,
-                "decimals": -2147483648,
-                "isUnsigned": false,
-                "isZeroFill": false,
-                "setEnumValues": "",
-                "isBinary": false,
-                "charset": "",
-                "collation": "",
-                "isNullable": true,
-                "defaultType": "Others",
-                "defaultValue": "",
-                "isOnUpdateCurrentTimestamp": false,
-                "isAutoInc": false,
-                "comment": "",
-                "columnFormat": "",
-                "storage": "",
-                "isVirtual": false,
-                "isGeneratedAlways": false,
-                "virtualExpr": "",
-                "virtualType": "",
-                "oldName": "revenue"
-              },
-              {
-                "objectType": "TableField_MYSQL",
                 "name": "budget",
                 "type": "int",
                 "length": -2147483648,
@@ -747,6 +747,32 @@
                 "virtualExpr": "",
                 "virtualType": "",
                 "oldName": "budget"
+              },
+              {
+                "objectType": "TableField_MYSQL",
+                "name": "revenue",
+                "type": "int",
+                "length": -2147483648,
+                "decimals": -2147483648,
+                "isUnsigned": false,
+                "isZeroFill": false,
+                "setEnumValues": "",
+                "isBinary": false,
+                "charset": "",
+                "collation": "",
+                "isNullable": true,
+                "defaultType": "Others",
+                "defaultValue": "",
+                "isOnUpdateCurrentTimestamp": false,
+                "isAutoInc": false,
+                "comment": "",
+                "columnFormat": "",
+                "storage": "",
+                "isVirtual": false,
+                "isGeneratedAlways": false,
+                "virtualExpr": "",
+                "virtualType": "",
+                "oldName": "revenue"
               },
               {
                 "objectType": "TableField_MYSQL",
@@ -804,8 +830,8 @@
           "type": "table",
           "schemaName": "default",
           "tableName": "title_basics",
-          "x": 102,
-          "y": 96,
+          "x": 258,
+          "y": 37,
           "width": 200,
           "height": 200,
           "isBold": false,
@@ -820,8 +846,8 @@
           "type": "table",
           "schemaName": "default",
           "tableName": "ratings",
-          "x": 397,
-          "y": 98,
+          "x": 500,
+          "y": 36,
           "width": 200,
           "height": 200,
           "isBold": false,
@@ -836,8 +862,8 @@
           "type": "table",
           "schemaName": "default",
           "tableName": "genres",
-          "x": 96,
-          "y": 348,
+          "x": 502,
+          "y": 281,
           "width": 200,
           "height": 200,
           "isBold": false,
@@ -852,8 +878,8 @@
           "type": "table",
           "schemaName": "default",
           "tableName": "title_genres",
-          "x": 399,
-          "y": 347,
+          "x": 261,
+          "y": 283,
           "width": 200,
           "height": 200,
           "isBold": false,
@@ -868,8 +894,8 @@
           "type": "table",
           "schemaName": "default",
           "tableName": "tmdb_data",
-          "x": 249,
-          "y": 597,
+          "x": 23,
+          "y": 31,
           "width": 200,
           "height": 200,
           "isBold": false,
@@ -891,17 +917,17 @@
           "visible": true,
           "vertices": [
             {
-              "x": 317,
-              "y": 196
+              "x": 473,
+              "y": 136
             },
             {
-              "x": 382,
-              "y": 198
+              "x": 485,
+              "y": 136
             }
           ],
           "label": {
-            "x": 307,
-            "y": 157,
+            "x": 463,
+            "y": 97,
             "width": 160,
             "height": 31,
             "fontName": "Arial Unicode MS",
@@ -925,18 +951,52 @@
           "visible": true,
           "vertices": [
             {
-              "x": 311,
-              "y": 448
+              "x": 487,
+              "y": 380
             },
             {
-              "x": 384,
-              "y": 447
+              "x": 476,
+              "y": 382
             }
           ],
           "label": {
-            "x": 301,
-            "y": 409,
+            "x": 502,
+            "y": 341,
             "width": 165,
+            "height": 31,
+            "fontName": "Arial Unicode MS",
+            "fontSize": 14,
+            "fontColor": {
+              "r": 204,
+              "g": 204,
+              "b": 204,
+              "a": 1
+            },
+            "isFontBold": false,
+            "isFontItalic": false,
+            "isVisible": false
+          }
+        },
+        {
+          "name": "fk_title_genres_title_basics_1",
+          "sourceTableName": "title_genres",
+          "sourceSchemaName": "default",
+          "lineWidth": 1,
+          "visible": true,
+          "vertices": [
+            {
+              "x": 357,
+              "y": 268
+            },
+            {
+              "x": 358,
+              "y": 252
+            }
+          ],
+          "label": {
+            "x": 365,
+            "y": 247,
+            "width": 190,
             "height": 31,
             "fontName": "Arial Unicode MS",
             "fontSize": 14,
