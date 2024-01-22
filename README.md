@@ -9,6 +9,7 @@ Movie Database to analyze a subset of a subset of IMDB data to test hypootheses 
 ## Data
 
 ## Dictionary
+[IMDb Dataset Dictionary](https://github.com/donmarcolaureano/Movie-Database/blob/main/IMDb%20Data%20Dictionary.pdf)
 
 ## Hypotheses tested
 
