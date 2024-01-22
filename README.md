@@ -1,8 +1,14 @@
 # Movie-Database
+Author: Marco Laureano
  
 ## Project Description
+Author: Marco Laureano
 
-Movie Database to analyze a subset of IMDB data to test hypootheses of what makes a successful movie
+Movie Database to analyze a subset of a subset of IMDB data to test hypootheses of what makes a successful movie
+
+## Data
+
+## Dictionary
 
 ## Hypotheses tested
 
